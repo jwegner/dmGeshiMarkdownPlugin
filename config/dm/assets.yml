@@ -1,0 +1,12 @@
+js:
+  dmGeshiMarkdownPlugin:
+    script: geshi
+#    form:      form
+
+css:
+  dmGeshiMarkdownPlugin:
+    style: geshi
+#    show:   show
+#    view:   view
+#    form:   form
+    

@@ -1,0 +1,8 @@
+parameters:
+  markdown.class:             dmGeshiMarkdown
+  
+services:
+  markdown:
+    class:                    %markdown.class%
+    shared:                   true
+    arguments:                [ @helper, @cache_manager, %markdown.options% ]  
