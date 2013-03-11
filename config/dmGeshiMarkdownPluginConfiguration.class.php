@@ -17,5 +17,10 @@ class dmGeshiMarkdownPluginConfiguration extends sfPluginConfiguration
    */
   public function initialize()
   {
+    $this->dispatcher->connect('dm.context.loaded', array($this, 'listenToContextLoadedEvent'));
+  }
+
+  public function listenToContextLoadedEvent(sfEvent $e) {
+      $e->getSubject()->getResponse()->addStylesheet('dmGeshiMarkdownPlugin.style', 'last');
   }
 }
